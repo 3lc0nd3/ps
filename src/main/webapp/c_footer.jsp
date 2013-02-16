@@ -11,7 +11,6 @@
 <!-- Initialize JS Plugins -->
 <%--<script src="javascripts/app.js"></script>--%>
 
-<%--<script src="javascripts/jqPlot/example.js"></script>--%>
 
 </body>
 </html>

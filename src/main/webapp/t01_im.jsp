@@ -52,8 +52,8 @@
             </select>
             <select id="jornada" class="span2" placeholder="Hola">
                 <option value="" disabled="disabled">Seleccione Jornada</option>
-                <option value="10">Ma&ntilde;ana</option>
-                <option value="11">Tarde </option>
+                <option value="1">Ma&ntilde;ana</option>
+                <option value="2">Tarde</option>
             </select>
             <%--<input type="button" class="btn" value="Enviar"/>--%>
         </fieldset>

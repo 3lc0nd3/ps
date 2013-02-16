@@ -1,0 +1,40 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+th {
+    background-color:gray;
+    
+}
+
+fieldset{
+    border: solid 1px paleturquoise;
+}
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+label { /*width: 10em;*/ float: left; }
+label.error { float: none; color: red; padding-left: .5em; vertical-align: top; }
+p { clear: both; }
+
+
+form.validateForm label.error { display: none; }	
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+

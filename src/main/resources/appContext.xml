@@ -42,7 +42,7 @@
                 <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
                 <prop key="hibernate.connection.characterEncoding">UTF-8</prop>
                 <prop key="hibernate.connection.charSet">UTF-8</prop>
-                <prop key="connection.useUnicode">true</prop> 
+                <prop key="connection.useUnicode">true</prop>
                 <prop key="hibernate.connection.username">motta</prop>
                 <prop key="hibernate.connection.password">motta</prop>
                 <prop key="hibernate.show_sql">false</prop>
@@ -64,7 +64,17 @@
                 <value>co.com.elramireza.motta.model.Participante</value>
                 <value>co.com.elramireza.motta.model.T01ImPregunta</value>
                 <value>co.com.elramireza.motta.model.T01ImRespuesta</value>
+                <value>co.com.elramireza.motta.model.T01ImResultado</value>
                 <value>co.com.elramireza.motta.model.Test</value>
+                <value>co.com.elramireza.motta.model.T02VhCategoria</value>
+                <value>co.com.elramireza.motta.model.T02VhPregunta</value>
+                <value>co.com.elramireza.motta.model.T02VhRespuesta</value>
+                <value>co.com.elramireza.motta.model.T02VhSeccion</value>
+                <value>co.com.elramireza.motta.model.T02VhCalificacion</value>
+                <value>co.com.elramireza.motta.model.T02VhResultado</value>
+                <value>co.com.elramireza.motta.model.T02VhCarrera</value>
+                <value>co.com.elramireza.motta.model.T02VhNivelEducativo</value>
+                <value>co.com.elramireza.motta.model.T02VhOcupacion</value>
             </list>
         </property>
     </bean>
@@ -80,7 +90,7 @@
     <bean class="org.springframework.web.context.support.ServletContextAttributeExporter">
         <property name="attributes">
             <map>
-<!-- inyecta los siguientes beans en el servlet context para que los servlets puedan acceder a ellos -->
+                <!-- inyecta los siguientes beans en el servlet context para que los servlets puedan acceder a ellos -->
                 <entry key="mottaManager" value-ref="mottaDAO" />
             </map>
         </property>
@@ -112,7 +122,7 @@
         </property>
     </bean>
 
-    
+
     <!-- .................................................. -->
     <!-- Definicion de los DAO a utilizar por la aplicacion -->
     <!-- .................................................. -->
@@ -124,14 +134,27 @@
             <dwr:include method="test"/>
             <dwr:include method="getPreguntas"/>
             <dwr:include method="guardarT01"/>
+            <dwr:include method="guardarT02"/>
+            <dwr:include method="getT02VhCalificacion"/>
+            <dwr:include method="getT02VhResultados"/>
+            <dwr:include method="getT02VhCarreras"/>
 
-            
             <!--LOS QUE NO VAN-->
 
 
             <!-- CONVERTS-->
             <dwr:convert class="co.com.elramireza.motta.model.T01ImPregunta" type="bean"/>
             <dwr:convert class="co.com.elramireza.motta.model.T01ImRespuesta" type="bean"/>
+            <dwr:convert class="co.com.elramireza.motta.model.T02VhCategoria" type="bean"/>
+            <dwr:convert class="co.com.elramireza.motta.model.T02VhPregunta" type="bean"/>
+            <dwr:convert class="co.com.elramireza.motta.model.T02VhRespuesta" type="bean"/>
+            <dwr:convert class="co.com.elramireza.motta.model.T02VhSeccion" type="bean"/>
+            <dwr:convert class="co.com.elramireza.motta.model.T02VhCalificacion" type="bean"/>
+            <dwr:convert class="co.com.elramireza.motta.model.T02VhResultado" type="bean"/>
+            <dwr:convert class="co.com.elramireza.motta.model.T02VhCarrera" type="bean"/>
+            <dwr:convert class="co.com.elramireza.motta.model.T02VhOcupacion" type="bean"/>
+            <dwr:convert class="co.com.elramireza.motta.model.T02VhNivelEducativo" type="bean"/>
+            <dwr:convert class="co.com.elramireza.motta.model.Test" type="bean"/>
             <dwr:convert class="co.com.elramireza.motta.model.Participante" type="bean">
                 <dwr:exclude method="password"/>
             </dwr:convert>

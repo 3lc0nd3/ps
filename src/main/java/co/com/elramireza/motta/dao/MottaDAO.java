@@ -1,23 +1,12 @@
 package co.com.elramireza.motta.dao;
 
-import co.com.elramireza.motta.model.Participante;
-import co.com.elramireza.motta.model.T01ImPregunta;
-import co.com.elramireza.motta.model.T01ImRespuesta;
-import co.com.elramireza.motta.model.T01ImResultado;
-import co.com.elramireza.motta.model.T02VhCalificacion;
-import co.com.elramireza.motta.model.T02VhCarrera;
-import co.com.elramireza.motta.model.T02VhPregunta;
-import co.com.elramireza.motta.model.T02VhRespuesta;
-import co.com.elramireza.motta.model.T02VhResultado;
-import co.com.elramireza.motta.model.T02VhSeccion;
-import co.com.elramireza.motta.model.Test;
+import co.com.elramireza.motta.model.*;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
-import org.apache.commons.logging.Log;
-import org.springframework.orm.hibernate3.HibernateTemplate;
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 /**
  * Created by Edward L. Ramirez A.
